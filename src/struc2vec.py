@@ -62,7 +62,7 @@ class Graph():
 		degrees = {}
 		degrees_sorted = set()
 		G = self.G
-		for v in G.keys():
+		for v in list(G.keys()):
 			degree = len(G[v])
 			degrees_sorted.add(degree)
 			if(degree not in degrees):
@@ -114,7 +114,7 @@ class Graph():
 				logging.info("Executing part {}...".format(part))
 				list_v = []
 				for v in c:
-					list_v.append([vd for vd in degreeList.keys() if vd > v])
+					list_v.append([vd for vd in list(degreeList.keys()) if vd > v])
 				job = executor.submit(calc_distances_all, c, list_v, degreeList,part, compactDegree = compactDegree)
 				futures[job] = part
 				part += 1
@@ -146,7 +146,7 @@ class Graph():
 		count_calc = 0
 
 		G = self.G
-		vertices = G.keys()
+		vertices = list(G.keys())
 
 		parts = self.workers
 		chunks = partition(vertices,parts)
@@ -220,14 +220,14 @@ class Graph():
 		if(len(self.G) > 500000):
 
 			with ProcessPoolExecutor(max_workers=1) as executor:
-				job = executor.submit(generate_random_walks_large_graphs,num_walks,walk_length,self.workers,self.G.keys())
+				job = executor.submit(generate_random_walks_large_graphs,num_walks,walk_length,self.workers,list(self.G.keys()))
 
 				job.result()
 
 		else:
 
 			with ProcessPoolExecutor(max_workers=1) as executor:
-				job = executor.submit(generate_random_walks,num_walks,walk_length,self.workers,self.G.keys())
+				job = executor.submit(generate_random_walks,num_walks,walk_length,self.workers,list(self.G.keys()))
 
 				job.result()
 
