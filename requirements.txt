@@ -1,0 +1,7 @@
+fastdtw==0.3.4
+futures==3.0.5
+gensim==4.3.1
+numpy==1.25.0
+scipy==1.11.1
+six==1.16.0
+smart-open==6.3.0
