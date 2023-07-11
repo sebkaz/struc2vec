@@ -7,14 +7,14 @@ This repository provides a reference implementation of *struc2vec* as described 
 
 The *struc2vec* algorithm learns continuous representations for nodes in any graph. *struc2vec* captures structural equivalence between nodes.  
 
-Before to execute *struc2vec*, it is necessary to install the following packages:
+Before executing *struc2vec*, it is necessary to install the packages from the `requirements.txt` file:
 <br/>
-``pip install futures``
-<br/>
-``pip install fastdtw``
-<br/>
-``pip install gensim``
+```{bash}
+python3 -m venv venv
+source venv/bin/activate
+(venv) pip install -r requirements.txt
 
+```
 ### Basic Usage
 
 #### Example
