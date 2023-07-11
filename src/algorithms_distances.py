@@ -66,7 +66,7 @@ def getCompactDegreeLists(g, root, maxDegree,calcUntilLayer):
             for degree,freq in l.items():
                 list_d.append((degree,freq))
             list_d.sort(key=lambda x: x[0])
-            listas[depth] = np.array(list_d,dtype=int32)
+            listas[depth] = np.array(list_d,dtype=np.int32)
 
             l = {}
 
