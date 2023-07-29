@@ -19,7 +19,7 @@ source venv/bin/activate
 Python 3 version: https://github.com/sebkaz/struc2vec/tree/master
 Changes in Word2Vec parameterization. 
 
-```
+
 ### Basic Usage
 
 #### Example
