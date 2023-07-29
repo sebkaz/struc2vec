@@ -13,6 +13,14 @@ Before executing *struc2vec*, it is necessary to install the packages from the `
 python3 -m venv venv
 source venv/bin/activate
 (venv) pip install -r requirements.txt
+``pip install futures``
+<br/>
+``pip install fastdtw``
+<br/>
+``pip install gensim``
+
+### Update
+Python 3 version: https://github.com/sebkaz/struc2vec/tree/master
 
 ```
 ### Basic Usage
